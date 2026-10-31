@@ -21,7 +21,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>F309 : <?= __("Preferences") ?></title>
+	<title>F309 : <?= __("Pref") ?></title>
     <meta name="viewport" content="initial-scale=1,width=device-width" />
 
 	<?php if ($_SESSION["uid"] && empty($_SESSION["safe_mode"])) {
@@ -140,9 +140,9 @@
 
 <div id="header">
 	<i class="material-icons net-alert" style="display: none"
-		title="<?= __("Communication problem with server.") ?>">error_outline</i>
+		title="<?= __("Communication problem.") ?>">error_outline</i>
 	<i class="material-icons log-alert" style="display: none"
-		 title="<?= __("Recent entries found in event log.") ?>" onclick="App.openPreferences('system')">warning</i>
+		 title="<?= __("Recent event log.") ?>" onclick="App.openPreferences('system')">warning</i>
 	<a id="updates-available" target="_blank" rel="noopener noreferrer" href="" style="display: none">
 		<i class="material-icons icon-new-version" title="<?= __('Updates available.') ?>">new_releases</i>
 	</a>
@@ -156,7 +156,7 @@
     <div dojoType="dijit.layout.TabContainer" region="center" id="pref-tabs">
         <div id="prefsTab" dojoType="dijit.layout.ContentPane"
             href="backend.php?op=Pref_Prefs"
-            title="<i class='material-icons'>settings</i> <?= __('Preferences') ?>"></div>
+            title="<i class='material-icons'>settings</i> <?= __('Pref') ?>"></div>
         <div id="feedsTab" dojoType="dijit.layout.ContentPane"
             href="backend.php?op=Pref_Feeds"
             title="<i class='material-icons'>rss_feed</i>  <?= __('Feeds') ?>"></div>
