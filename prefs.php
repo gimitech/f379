@@ -149,8 +149,7 @@
 	<a id="plugin-updates-available" href="prefs.php" onclick="dijit.byId('pref-tabs').selectChild(dijit.byId('prefsTab')); return false" style="display: none">
 		<i class="material-icons icon-new-version" title="<?= __('Updates available.') ?>">new_releases</i>
 	</a>
-	<a href="#" onclick="document.location.href = 'index.php'"><?= __('Exit') ?></a>	    
-    </a>
+	<a href="#" onclick="document.location.href = 'index.php'"><?= __('Exit') ?></a>
 </div>
 
 <div id="main" dojoType="dijit.layout.BorderContainer">
@@ -176,11 +175,7 @@
                 title="<i class='material-icons'>person</i> <?= __('Users') ?>"></div>
             <div id="systemTab" dojoType="dijit.layout.ContentPane"
                 href="backend.php?op=Pref_System"
-                title="<i class='material-icons'>info_outline</i> <?= __('System') ?>"></div>
-				<!--  New Exit Tab Added Below -->        
-    		<a href="index.php" class="custom-exit-tab">
-        	<i class='material-icons'>exit_to_app</i> <?= __('Exit') ?>
-    		</a> 
+                title="<i class='material-icons'>info_outline</i> <?= __('System') ?>"></div>				
         <?php } ?>
 
         <?php
