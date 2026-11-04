@@ -178,12 +178,11 @@
                 href="backend.php?op=Pref_System"
                 title="<i class='material-icons'>info_outline</i> <?= __('System') ?>"></div>
         <?php } ?>
-		<!--  New Exit Tab Added Below -->
-        <div id="exitTab" dojoType="dijit.layout.ContentPane"
+		<!--  New Exit Tab Added Below -->        
     		<a href="index.php" class="custom-exit-tab">
         	<i class='material-icons'>exit_to_app</i> <?= __('Exit') ?>
     		</a>          
-		</div>
+		
         <?php
             PluginHost::getInstance()->run_hooks(PluginHost::HOOK_PREFS_TABS);
         ?>
