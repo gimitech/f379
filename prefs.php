@@ -176,9 +176,7 @@
             <div id="systemTab" dojoType="dijit.layout.ContentPane"
                 href="backend.php?op=Pref_System"
                 title="<i class='material-icons'>info_outline</i> <?= __('System') ?>"></div>
-		<div id="exitTab" dojoType="dijit.layout.ContentPane"
-            	href="/index.php"
-				title="<i class='material-icons'>exit_to_app</i> <?= __('Exit') ?>"></div>
+		<a href="#" onclick="document.location.href = 'index.php'"><?= __('Exit') ?></a>
         <?php } ?>
 
         <?php
