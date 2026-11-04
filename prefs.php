@@ -148,8 +148,7 @@
 	</a>
 	<a id="plugin-updates-available" href="prefs.php" onclick="dijit.byId('pref-tabs').selectChild(dijit.byId('prefsTab')); return false" style="display: none">
 		<i class="material-icons icon-new-version" title="<?= __('Updates available.') ?>">new_releases</i>
-	</a>
-	<a href="#" onclick="document.location.href = 'index.php'"><?= __('Exit') ?></a>
+	</a>	
 </div>
 
 <div id="main" dojoType="dijit.layout.BorderContainer">	
@@ -183,7 +182,7 @@
         ?>
         </div>
 		<div id="footer" dojoType="dijit.layout.ContentPane" region="bottom">
-			<a href="#" onclick="document.location.href = 'index.php'"><?= __('Exit') ?></a> <?= Config::get_version_html() ?>							
+			<a href="#" onclick="document.location.href = 'index.php'"><?= __('Exit') ?></a> <span>v<?= Config::get_version_html() ?></span>							
     </div>		
 </div>	
 </body>
