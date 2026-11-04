@@ -149,9 +149,7 @@
 	<a id="plugin-updates-available" href="prefs.php" onclick="dijit.byId('pref-tabs').selectChild(dijit.byId('prefsTab')); return false" style="display: none">
 		<i class="material-icons icon-new-version" title="<?= __('Updates available.') ?>">new_releases</i>
 	</a>
-	<a href="#" onclick="document.location.href = 'index.php'"><?= __('Exit') ?></a>
-	    <a href="index.php" class="custom-exit-tab">
-        <i class='material-icons'>exit_to_app</i> <?= __('Exit') ?>
+	<a href="#" onclick="document.location.href = 'index.php'"><?= __('Exit') ?></a>	    
     </a>
 </div>
 
@@ -182,7 +180,8 @@
         <?php } ?>
 		<!--  New Exit Tab Added Below -->
         <div id="exitTab" dojoType="dijit.layout.ContentPane"
-            title="<i class='material-icons'>exit_to_app</i> <?= __('Exit') ?>"            
+            <a href="index.php" class="custom-exit-tab">
+        	<i class='material-icons'>exit_to_app</i> <?= __('Exit') ?>           
 		</div>
         <?php
             PluginHost::getInstance()->run_hooks(PluginHost::HOOK_PREFS_TABS);
