@@ -179,8 +179,7 @@
         <?php } ?>
 		<!--  New Exit Tab Added Below -->
         <div id="exitTab" dojoType="dijit.layout.ContentPane"
-            title="<i class='material-icons'>exit_to_app</i> <?= __('Exit') ?>"
-            title="<span onclick='window.location.href=&quot;index.php&quot;; event.stopPropagation();' style='display:inline-block; width:100%; height:100%;'><i class='material-icons'>exit_to_app</i> <?= __('Exit') ?></span>">
+            title="<i class='material-icons'>exit_to_app</i> <?= __('Exit') ?>"            
 		</div>
         <?php
             PluginHost::getInstance()->run_hooks(PluginHost::HOOK_PREFS_TABS);
@@ -191,7 +190,22 @@
 				<span>v<?= Config::get_version_html() ?></span>
     </div>
 </div>
-
+<script type="text/javascript">
+    require(["dijit/registry", "dojo/ready"], function(registry, ready) {
+        ready(function() {
+            var tabContainer = registry.byId("pref-tabs");
+            if (tabContainer) {
+                // Watch for when the active tab changes
+                tabContainer.watch("selectedChildWidget", function(name, oldTab, newTab) {
+                    if (newTab && newTab.id === "exitTab") {
+                        // Immediately redirect to exit before Dojo caches the selection state
+                        window.location.href = "index.php";
+                    }
+                });
+            }
+        });
+    });
+</script>
 </body>
 </html>
 <?php send_conditional_html((string) ob_get_clean());
