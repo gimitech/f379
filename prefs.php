@@ -153,6 +153,7 @@
 </div>
 
 <div id="main" dojoType="dijit.layout.BorderContainer">
+	<a href="#" onclick="document.location.href = 'index.php'"><?= __('Exit') ?></a>
     <div dojoType="dijit.layout.TabContainer" region="center" id="pref-tabs">
         <div id="prefsTab" dojoType="dijit.layout.ContentPane"
             href="backend.php?op=Pref_Prefs"
@@ -175,8 +176,7 @@
                 title="<i class='material-icons'>person</i> <?= __('Users') ?>"></div>
             <div id="systemTab" dojoType="dijit.layout.ContentPane"
                 href="backend.php?op=Pref_System"
-                title="<i class='material-icons'>info_outline</i> <?= __('System') ?>"></div>
-		<a href="#" onclick="document.location.href = 'index.php'"><?= __('Exit') ?></a>
+                title="<i class='material-icons'>info_outline</i> <?= __('System') ?>"></div>		
         <?php } ?>
 
         <?php
