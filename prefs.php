@@ -150,6 +150,9 @@
 		<i class="material-icons icon-new-version" title="<?= __('Updates available.') ?>">new_releases</i>
 	</a>
 	<a href="#" onclick="document.location.href = 'index.php'"><?= __('Exit') ?></a>
+	    <a href="index.php" class="custom-exit-tab">
+        <i class='material-icons'>exit_to_app</i> <?= __('Exit') ?>
+    </a>
 </div>
 
 <div id="main" dojoType="dijit.layout.BorderContainer">
@@ -190,35 +193,61 @@
 				<span>v<?= Config::get_version_html() ?></span>
     </div>
 </div>
-<script type="text/javascript">
-    (function() {
-        function interceptExitTab() {
-            // Find Dojo's generated header tab button for your exit tab
-            var exitButton = document.getElementById("dijit_layout_ContentPane_4") 
-                          || document.getElementById("pref-tabs_tablist_exitTab")
-                          || document.querySelector('[id*="exitTab"]');
+	<style>
+    /* Desktop Placement: Align right next to the tab buttons */
+    .custom-exit-tab {
+        position: absolute;
+        top: 6px;
+        right: 15px;
+        z-index: 999;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 12px;
+        background: #f5f5f5;
+        border: 1px solid #ccc;
+        border-radius: 4px 4px 0 0;
+        text-decoration: none;
+        color: #333;
+        font-family: sans-serif;
+        font-size: 13px;
+        font-weight: bold;
+        height: 18px;
+    }
+    .custom-exit-tab:hover {
+        background: #e0e0e0;
+        color: #000;
+    }
+    .custom-exit-tab i {
+        font-size: 18px;
+    }
 
-            if (exitButton) {
-                // Attach a native click listener that bypasses Dojo completely
-                exitButton.addEventListener("click", function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    window.location.href = "index.php";
-                }, true); // Use capturing phase to beat Dojo's internal event handler
-            } else {
-                // Retry if Dojo hasn't fully rendered the layout tabs yet
-                setTimeout(interceptExitTab, 100);
-            }
+    /* Mobile Optimization: Drops down below the tabs cleanly without overlapping */
+    @media (max-width: 768px) {
+        .custom-exit-tab {
+            position: relative;
+            top: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            border-radius: 4px;
+            margin: 10px;
+            height: auto;
+            padding: 10px;
+            background: #d9534f; /* Soft red so users spot it instantly on mobile */
+            color: white;
+            border: none;
         }
-        
-        // Initiate the lookup loop as soon as the DOM payload finishes
-        if (document.readyState === "loading") {
-            document.addEventListener("DOMContentLoaded", interceptExitTab);
-        } else {
-            interceptExitTab();
+        .custom-exit-tab:hover {
+            background: #c9302c;
+            color: white;
         }
-    })();
-</script>
+        /* Ensure the main container accounts for the extra element height on small screens */
+        #pref-tabs {
+            margin-top: 0px;
+        }
+    }
+</style>
 </body>
 </html>
 <?php send_conditional_html((string) ob_get_clean());
