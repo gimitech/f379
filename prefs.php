@@ -183,12 +183,10 @@
         ?>
         </div>
 		<div id="footer" dojoType="dijit.layout.ContentPane" region="bottom">
+			<a href="#" onclick="document.location.href = 'index.php'"><?= __('Exit') ?></a>
 			<a class="text-muted" target="_blank" href="https://github.com/tt-rss/tt-rss">F309</a>
 				<span>v<?= Config::get_version_html() ?></span>			
-    </div>
-		<div id="footer" dojoType="dijit.layout.ContentPane" region="bottom">
-			<a href="#" onclick="document.location.href = 'index.php'"><?= __('Exit') ?></a>	
-    </div>
+    </div>		
 </div>	
 </body>
 </html>
