@@ -191,20 +191,33 @@
     </div>
 </div>
 <script type="text/javascript">
-    require(["dijit/registry", "dojo/ready"], function(registry, ready) {
-        ready(function() {
-            var tabContainer = registry.byId("pref-tabs");
-            if (tabContainer) {
-                // Watch for when the active tab changes
-                tabContainer.watch("selectedChildWidget", function(name, oldTab, newTab) {
-                    if (newTab && newTab.id === "exitTab") {
-                        // Immediately redirect to exit before Dojo caches the selection state
-                        window.location.href = "index.php";
-                    }
-                });
+    (function() {
+        function interceptExitTab() {
+            // Find Dojo's generated header tab button for your exit tab
+            var exitButton = document.getElementById("dijit_layout_ContentPane_4") 
+                          || document.getElementById("pref-tabs_tablist_exitTab")
+                          || document.querySelector('[id*="exitTab"]');
+
+            if (exitButton) {
+                // Attach a native click listener that bypasses Dojo completely
+                exitButton.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    window.location.href = "index.php";
+                }, true); // Use capturing phase to beat Dojo's internal event handler
+            } else {
+                // Retry if Dojo hasn't fully rendered the layout tabs yet
+                setTimeout(interceptExitTab, 100);
             }
-        });
-    });
+        }
+        
+        // Initiate the lookup loop as soon as the DOM payload finishes
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", interceptExitTab);
+        } else {
+            interceptExitTab();
+        }
+    })();
 </script>
 </body>
 </html>
