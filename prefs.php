@@ -180,7 +180,7 @@
 		<!--  New Exit Tab Added Below -->
         <div id="exitTab" dojoType="dijit.layout.ContentPane"
             title="<i class='material-icons'>exit_to_app</i> <?= __('Exit') ?>"
-            onShow="if(!window.isExiting){ window.isExiting=true; window.location.href='index.php'; }">
+            title="<span onclick='window.location.href=&quot;index.php&quot;; event.stopPropagation();' style='display:inline-block; width:100%; height:100%;'><i class='material-icons'>exit_to_app</i> <?= __('Exit') ?></span>">
 		</div>
         <?php
             PluginHost::getInstance()->run_hooks(PluginHost::HOOK_PREFS_TABS);
