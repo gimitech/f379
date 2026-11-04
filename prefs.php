@@ -180,8 +180,9 @@
         <?php } ?>
 		<!--  New Exit Tab Added Below -->
         <div id="exitTab" dojoType="dijit.layout.ContentPane"
-            <a href="index.php" class="custom-exit-tab">
-        	<i class='material-icons'>exit_to_app</i> <?= __('Exit') ?>           
+    		<a href="index.php" class="custom-exit-tab">
+        	<i class='material-icons'>exit_to_app</i> <?= __('Exit') ?>
+    		</a>          
 		</div>
         <?php
             PluginHost::getInstance()->run_hooks(PluginHost::HOOK_PREFS_TABS);
