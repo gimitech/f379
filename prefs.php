@@ -151,9 +151,8 @@
 	</a>
 	<a href="#" onclick="document.location.href = 'index.php'"><?= __('Exit') ?></a>
 </div>
-
-<div id="main" dojoType="dijit.layout.BorderContainer">
-	<a href="#" onclick="document.location.href = 'index.php'"><?= __('Exit') ?></a>
+<a href="#" onclick="document.location.href = 'index.php'"><?= __('Exit') ?></a>
+<div id="main" dojoType="dijit.layout.BorderContainer">	
     <div dojoType="dijit.layout.TabContainer" region="center" id="pref-tabs">
         <div id="prefsTab" dojoType="dijit.layout.ContentPane"
             href="backend.php?op=Pref_Prefs"
