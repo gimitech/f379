@@ -177,12 +177,12 @@
             <div id="systemTab" dojoType="dijit.layout.ContentPane"
                 href="backend.php?op=Pref_System"
                 title="<i class='material-icons'>info_outline</i> <?= __('System') ?>"></div>
-        <?php } ?>
-		<!--  New Exit Tab Added Below -->        
+				<!--  New Exit Tab Added Below -->        
     		<a href="index.php" class="custom-exit-tab">
         	<i class='material-icons'>exit_to_app</i> <?= __('Exit') ?>
-    		</a>          
-		
+    		</a> 
+        <?php } ?>
+
         <?php
             PluginHost::getInstance()->run_hooks(PluginHost::HOOK_PREFS_TABS);
         ?>
@@ -191,62 +191,7 @@
 			<a class="text-muted" target="_blank" href="https://github.com/tt-rss/tt-rss">F309</a>
 				<span>v<?= Config::get_version_html() ?></span>
     </div>
-</div>
-	<style>
-    /* Desktop Placement: Align right next to the tab buttons */
-    .custom-exit-tab {
-        position: absolute;
-        top: 6px;
-        right: 15px;
-        z-index: 999;
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        padding: 6px 12px;
-        background: #f5f5f5;
-        border: 1px solid #ccc;
-        border-radius: 4px 4px 0 0;
-        text-decoration: none;
-        color: #333;
-        font-family: sans-serif;
-        font-size: 13px;
-        font-weight: bold;
-        height: 18px;
-    }
-    .custom-exit-tab:hover {
-        background: #e0e0e0;
-        color: #000;
-    }
-    .custom-exit-tab i {
-        font-size: 18px;
-    }
-
-    /* Mobile Optimization: Drops down below the tabs cleanly without overlapping */
-    @media (max-width: 768px) {
-        .custom-exit-tab {
-            position: relative;
-            top: 0;
-            right: 0;
-            display: flex;
-            justify-content: center;
-            border-radius: 4px;
-            margin: 10px;
-            height: auto;
-            padding: 10px;
-            background: #d9534f; /* Soft red so users spot it instantly on mobile */
-            color: white;
-            border: none;
-        }
-        .custom-exit-tab:hover {
-            background: #c9302c;
-            color: white;
-        }
-        /* Ensure the main container accounts for the extra element height on small screens */
-        #pref-tabs {
-            margin-top: 0px;
-        }
-    }
-</style>
+</div>	
 </body>
 </html>
 <?php send_conditional_html((string) ob_get_clean());
