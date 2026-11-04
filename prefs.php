@@ -183,7 +183,7 @@
         ?>
         </div>
 		<div id="footer" dojoType="dijit.layout.ContentPane" region="bottom">
-			<a href="#" onclick="document.location.href = 'index.php'"><?= __('Exit') ?></a><span>v<?= Config::get_version_html() ?></span>							
+			<a href="#" onclick="document.location.href = 'index.php'"><?= __('Exit') ?></a> <?= Config::get_version_html() ?>							
     </div>		
 </div>	
 </body>
