@@ -49,7 +49,7 @@ msgstr "3 ヶ月前"
 
 #: backend.php:64
 msgid "Default interval"
-msgstr "更新の間隔"
+msgstr "標準の間隔"
 
 #: backend.php:65 backend.php:75
 msgid "Disable updates"
@@ -205,15 +205,15 @@ msgstr "既読にする"
 
 #: index.php:253
 msgid "Older than one day"
-msgstr "1日前より古い項目"
+msgstr "1 日前より古い項目"
 
 #: index.php:254
 msgid "Older than one week"
-msgstr "1週間前より古い項目"
+msgstr "1 週間前より古い項目"
 
 #: index.php:255
 msgid "Older than two weeks"
-msgstr "2週間前より古い項目"
+msgstr "2 週間前より古い項目"
 
 #: index.php:268
 msgid "Switch to three panel view"
@@ -289,7 +289,7 @@ msgstr "すべてのフィード:"
 
 #: index.php:310
 msgid "(Un)hide read feeds"
-msgstr "読んだフィードを隠す/再表示する"
+msgstr "読んだフィードを隠す／再表示する"
 
 #: index.php:311
 msgid "UI layout:"
@@ -435,7 +435,7 @@ msgstr "公開を切り替える"
 
 #: classes/RPC.php:498 js/Headlines.js:1444 js/Headlines.js:692
 msgid "Toggle unread"
-msgstr "未読/既読を切り替える"
+msgstr "未読／既読を切り替える"
 
 #: classes/RPC.php:499
 msgid "Edit tags"
@@ -517,7 +517,7 @@ msgstr "選択を反転する"
 
 #: classes/RPC.php:519
 msgid "Deselect everything"
-msgstr "選択を全て解除する"
+msgstr "選択をすべて解除する"
 
 #: classes/RPC.php:520
 msgid "Feed"
@@ -529,7 +529,7 @@ msgstr "現在のフィードを更新する"
 
 #: classes/RPC.php:522
 msgid "Un/hide read feeds"
-msgstr "読んだフィードを隠す/再表示する"
+msgstr "読んだフィードを隠す／再表示する"
 
 #: classes/RPC.php:523 classes/Pref_Feeds.php:926 js/CommonDialogs.js:31
 msgid "Subscribe to feed"
@@ -624,7 +624,7 @@ msgstr "このウィンドウを閉じる"
 
 #: classes/TimeHelper.php:7
 msgid "Never"
-msgstr "未更新"
+msgstr "なし"
 
 #: classes/TimeHelper.php:13
 #, php-format
@@ -633,7 +633,7 @@ msgstr "%d 分"
 
 #: classes/Pref_Prefs.php:36 classes/Pref_Feeds.php:615 js/CommonDialogs.js:511
 msgid "General"
-msgstr "全体"
+msgstr "一般"
 
 #: classes/Pref_Prefs.php:59
 msgid "Articles"
@@ -723,7 +723,7 @@ msgstr "指定された時刻前後にダイジェストの送信を試みる"
 
 #: classes/Pref_Prefs.php:109
 msgid "Time in UTC"
-msgstr "UTCの時間"
+msgstr "UTC の時間"
 
 #: classes/Pref_Prefs.php:110
 msgid "Enable API"
@@ -731,7 +731,7 @@ msgstr "API を有効にする"
 
 #: classes/Pref_Prefs.php:110
 msgid "Allows accessing this account through the API"
-msgstr "このアカウントに対する API 経由でアクセスを許可する"
+msgstr "API 経由でこのアカウントにアクセスすることを許可する"
 
 #: classes/Pref_Prefs.php:111
 #, fuzzy
@@ -945,7 +945,7 @@ msgstr "新しい URL を生成する"
 
 #: classes/Pref_Prefs.php:407 classes/Pref_Feeds.php:947 js/PrefHelpers.js:226
 msgid "Remove selected"
-msgstr "選択したカテゴリーを削除"
+msgstr "選択項目を削除"
 
 #: classes/Pref_Prefs.php:443 classes/Pref_Prefs.php:495
 msgid "Your password:"
@@ -1108,7 +1108,7 @@ msgstr "メールプラグイン"
 
 #: classes/Pref_Prefs.php:927
 msgid "Personal data / Authentication"
-msgstr "個人データ / 認証"
+msgstr "個人データ／認証"
 
 #: classes/Pref_Prefs.php:941 classes/Pref_Feeds.php:1062
 #: js/CommonDialogs.js:622
@@ -1214,8 +1214,9 @@ msgid ""
 "from article header context menu (applies to all selected articles) or use a "
 "filter."
 msgstr ""
-"表示する記事が見つかりません。手動でラベルに記事を割り当てるか(上の操作メ"
-"ニューを参照します)、フィルターを使うことができます。"
+"表示する記事が見つかりません。記事ヘッダーのコンテキストメニューから手動で記"
+"事をラベルに割り当てるか (選択したすべての記事に適用されます)、フィルター"
+"を使うことができます。"
 
 #: classes/Feeds.php:382
 msgid "No articles found to display."
@@ -1224,7 +1225,7 @@ msgstr "表示する記事が見つかりません。"
 #: classes/Feeds.php:399
 #, php-format
 msgid "Feeds last updated at %s"
-msgstr "%s に最終更新されたフィード"
+msgstr "フィードの最終更新: %s"
 
 #: classes/Feeds.php:409
 msgid "Some feeds have update errors (click for details)"
@@ -1294,7 +1295,7 @@ msgstr "重複したフィード: %s"
 #: classes/OPML.php:310
 #, php-format
 msgid "Adding label %s"
-msgstr "ラベル %s の割り当て"
+msgstr "ラベル %s を追加しています"
 
 #: classes/OPML.php:313
 #, php-format
@@ -1309,12 +1310,12 @@ msgstr "%s を %s に設定"
 #: classes/OPML.php:360
 #, php-format
 msgid "Adding filter %s..."
-msgstr "フィルタ「%s」を追加しています..."
+msgstr "フィルター「%s」を追加しています..."
 
 #: classes/OPML.php:511
 #, php-format
 msgid "Processing category: %s"
-msgstr "処理中のカテゴリ: %s"
+msgstr "処理中のカテゴリー: %s"
 
 #: classes/OPML.php:545
 #, php-format
@@ -1364,8 +1365,8 @@ msgid ""
 "You will need to provide valid account name and email. Password reset link "
 "will be sent to your email address."
 msgstr ""
-"有効なアカウント名と電子メールアドレスを入力する必要があります。パスワードリ"
-"セット用のリンクを記載したメールがあなたの電子メールアドレスに送信されます。"
+"有効なアカウント名とメールアドレスを入力する必要があります。パスワードリ"
+"セット用のリンクを記載したメールがあなたのメールアドレスに送信されます。"
 
 #: classes/Handler_Public.php:513 classes/Pref_Feeds.php:653
 #: plugins/bookmarklets/init.php:308 include/login_form.php:128
@@ -1396,8 +1397,7 @@ msgstr "[tt-rss] パスワードリセットの要求"
 
 #: classes/Handler_Public.php:596
 msgid "Sorry, login and email combination not found."
-msgstr ""
-"ログイン名とメールアドレスの組み合わせが組み合わせが見つかりませんでした。"
+msgstr "ログイン名とメールアドレスの組み合わせが見つかりませんでした。"
 
 #: classes/Handler_Public.php:623
 msgid "Your access level is insufficient to run this script."
@@ -1491,7 +1491,7 @@ msgstr "更新された記事を未読にする"
 #: classes/Pref_Feeds.php:619 js/PrefFeedTree.js:439 js/CommonDialogs.js:58
 #: js/CommonDialogs.js:540
 msgid "Place in category:"
-msgstr "カテゴリーの場所:"
+msgstr "配置するカテゴリー:"
 
 #: classes/Pref_Feeds.php:626 js/Feeds.js:645 js/CommonDialogs.js:556
 msgid "Language:"
@@ -1703,7 +1703,7 @@ msgstr ""
 
 #: classes/Pref_Filters.php:786
 msgid "Combine"
-msgstr "組み合わせ"
+msgstr "結合"
 
 #: classes/Pref_Filters.php:792
 #, fuzzy
@@ -1768,7 +1768,7 @@ msgstr ""
 
 #: classes/Pref_System.php:110 js/PrefHelpers.js:621
 msgid "Refresh"
-msgstr "再描画"
+msgstr "再読み込み"
 
 #: classes/Pref_System.php:115
 msgid "&lt;&lt;"
@@ -2018,7 +2018,7 @@ msgstr "記事"
 
 #: plugins/share/init.php:58
 msgid "Unshare all articles"
-msgstr "全ての記事のお気に入りを解除する"
+msgstr "すべての記事の共有を解除する"
 
 #: plugins/share/init.php:69
 msgid "Shared URLs cleared."
@@ -2030,7 +2030,7 @@ msgstr "URL で共有"
 
 #: plugins/share/init.php:265
 msgid "You can share this article by the following unique URL:"
-msgstr "以下のユニーク URL によってこの記事を共有できます。"
+msgstr "以下のユニーク URL によってこの記事を共有できます:"
 
 #: plugins/share/init.php:277
 msgid "Article not found."
@@ -2169,7 +2169,7 @@ msgstr "トラフィックを抑制する"
 
 #: include/login_form.php:176
 msgid "Does not display images in articles, reduces automatic refreshes."
-msgstr "記事中の画像を表示しないことで自動更新を減らす。"
+msgstr "記事中の画像を表示せず、自動更新を減らします。"
 
 #: include/login_form.php:184 js/CommonDialogs.js:13
 msgid "Safe mode"
@@ -2244,7 +2244,7 @@ msgstr "はじめにいくつかのフィードを選択してください。"
 
 #: js/App.js:1965
 msgid "You can't unsubscribe from the category."
-msgstr "カテゴリーから購読をやめることができません。"
+msgstr "カテゴリーの購読をやめることはできません。"
 
 #: js/App.js:1971 js/CommonDialogs.js:345 js/CommonDialogs.js:382
 #, java-printf-format, javascript-format
@@ -2313,7 +2313,7 @@ msgstr "カテゴリーの削除"
 msgid ""
 "Remove category %s? Any nested feeds would be placed into Uncategorized."
 msgstr ""
-"カテゴリー %s を削除しますか?カテゴリー内のフィードは全てカテゴリー割り当てな"
+"カテゴリー %s を削除しますか?カテゴリー内のフィードはすべてカテゴリー割り当てな"
 "しに配置されます。"
 
 #: js/PrefFeedTree.js:198
@@ -2554,7 +2554,7 @@ msgstr "記事が選択されていません。"
 
 #: js/Headlines.js:1365
 msgid "No articles found to mark"
-msgstr "設定する記事が見つかりませんでした"
+msgstr "既読にする記事が見つかりませんでした"
 
 #: js/Headlines.js:1367
 #, java-printf-format, javascript-format
@@ -2650,7 +2650,7 @@ msgstr "なし"
 
 #: js/CommonFilters.js:238
 msgid "Edit action"
-msgstr "動作の編集"
+msgstr "操作の編集"
 
 #: js/CommonFilters.js:238
 msgid "Add action"
@@ -2688,7 +2688,7 @@ msgstr "選択したカテゴリーを削除しますか?"
 #: js/PrefHelpers.js:44
 msgid "This will invalidate all previously generated feed URLs. Continue?"
 msgstr ""
-"この操作は過去に生成されたフィードの URL 全てを無効化します。続けますか?"
+"この操作は過去に生成されたフィードの URL すべてを無効化します。続けますか?"
 
 #: js/PrefHelpers.js:45 plugins/share/share_prefs.js:6
 msgid "Clearing URLs..."
@@ -2921,7 +2921,7 @@ msgid ""
 "If you have imported labels and/or filters, you might need to reload "
 "preferences to see your new data."
 msgstr ""
-"インポートしたラベルかフィルタがあるなら、新しいデータを見るために設定を更新"
+"インポートしたラベルかフィルターがあるなら、新しいデータを見るために設定を更新"
 "(リロード)する必要があるかもしれません。"
 
 #: js/FeedTree.js:98
@@ -3013,11 +3013,11 @@ msgstr "指定された URL は無効のようです。"
 
 #: js/CommonDialogs.js:164
 msgid "Specified URL doesn't seem to contain any feeds."
-msgstr "指定された URL にはフィードが含まれていなようです。"
+msgstr "指定された URL にはフィードが含まれていないようです。"
 
 #: js/CommonDialogs.js:177
 msgid "Expand to select feed"
-msgstr "選択したフィードを展開する"
+msgstr "展開してフィードを選択"
 
 #: js/CommonDialogs.js:189
 #, fuzzy
@@ -3152,7 +3152,7 @@ msgstr "この記事の共有を解除しますか?"
 
 #: plugins/share/share_prefs.js:5
 msgid "This will invalidate all previously shared article URLs. Continue?"
-msgstr "この操作は過去に共有された記事の URL 全てを無効化します。続けますか?"
+msgstr "この操作は過去に共有された記事の URL すべてを無効化します。続けますか?"
 
 #: js/App.js:679
 msgid "Stack trace"
@@ -3242,7 +3242,7 @@ msgstr "記事の URL をコピー"
 
 #: js/CommonFilters.js:64
 msgid "No recent articles matching this filter have been found."
-msgstr "このフィルタに一致する最近の記事がありません。"
+msgstr "このフィルターに一致する最近の記事がありません。"
 
 #: js/CommonFilters.js:402
 msgid "Enabled"
