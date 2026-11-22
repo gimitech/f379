@@ -26,22 +26,22 @@
 class StreamReader {
   // should return a string [FIXME: perhaps return array of bytes?]
   function read($bytes) {
-    return false;
+    return;
   }
 
   // should return new position
   function seekto($position) {
-    return false;
+    return;
   }
 
   // returns current position
   function currentpos() {
-    return false;
+    return;
   }
 
   // returns length of entire stream (limit for seekto()s)
   function length() {
-    return false;
+    return;
   }
 };
 
@@ -94,11 +94,11 @@ class FileReader {
       $this->_fd = fopen($filename,'rb');
       if (!$this->_fd) {
         $this->error = 3; // Cannot read file, probably permissions
-        return false;
+        return;
       }
     } else {
       $this->error = 2; // File doesn't exist
-      return false;
+      return;
     }
   }
 
