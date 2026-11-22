@@ -121,7 +121,7 @@ class gettext_reader {
       $this->BYTEORDER = 0;
     } else {
       $this->error = 1; // not MO file
-      return false;
+      return;
     }
 
     // FIXME: Do we care about revision? We should.
